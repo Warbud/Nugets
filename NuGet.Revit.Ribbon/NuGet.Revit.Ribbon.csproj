@@ -12,6 +12,14 @@
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <LangVersion>9</LangVersion>
+        <Authors>Adrian</Authors>
+    <PackageDescription>Revit Panel Extention</PackageDescription>
+    <RepositoryUrl>
+      https://github.com/Nairda015/Nuget.Revit
+    </RepositoryUrl>
+    <RepositoryType>
+      git
+    </RepositoryType>
     </PropertyGroup>
     <PropertyGroup>
         <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
