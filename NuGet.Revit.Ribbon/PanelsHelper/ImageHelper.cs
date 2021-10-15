@@ -6,17 +6,25 @@ namespace NuGet.Revit.Ribbon.PanelsHelper
 {
     public static class ImageHelper
     {
-        public static Bitmap TransformImage(this string path, int size)
+        /// <summary>
+        /// Resize image from path
+        /// </summary>
+        public static Bitmap ResizeImage(this string path, int size)
         {
-            var originalFile =  new Bitmap(path);
-            return new Bitmap(originalFile, size, size);
+            return new Bitmap(new Bitmap(path), size, size);
         }
         
-        public static Bitmap TransformImage(this Image image, int size)
+        /// <summary>
+        /// Resize image
+        /// </summary>
+        public static Bitmap ResizeImage(this Image image, int size)
         {
             return new Bitmap(image, size, size);
         }
         
+        /// <summary>
+        /// Change black pixels in image from path. If color parameter is Color.Black image will be returned unchanged.
+        /// </summary>
         public static Bitmap ChangePngColor(this string path, Color color)
         {
             var bitmap = new Bitmap(path);
@@ -24,11 +32,8 @@ namespace NuGet.Revit.Ribbon.PanelsHelper
         }
         
         /// <summary>
-        /// Change black pixels
+        /// Change black pixels in image. If color parameter is Color.Black image will be returned unchanged.
         /// </summary>
-        /// <param name="image"></param>
-        /// <param name="color"></param>
-        /// <returns></returns>
         public static Bitmap ChangePngColor(this Bitmap image, Color color)
         {
             if (color == Color.Black)
@@ -50,7 +55,10 @@ namespace NuGet.Revit.Ribbon.PanelsHelper
             return image;
         }
         
-        public static BitmapImage ToBitmapImage(this Bitmap src)
+        /// <summary>
+        /// Convert Image to BitmapImage for WPF apps
+        /// </summary>
+        public static BitmapImage ToBitmapImage(this Image src)
         {
             var ms = new MemoryStream();
             src.Save(ms, System.Drawing.Imaging.ImageFormat.Png);

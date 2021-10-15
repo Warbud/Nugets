@@ -13,6 +13,11 @@
         <FileAlignment>512</FileAlignment>
         <LangVersion>9</LangVersion>
     </PropertyGroup>
+    <PropertyGroup>
+        <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+            None
+        </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
         <DebugSymbols>true</DebugSymbols>
@@ -31,6 +36,7 @@
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="PresentationCore" />
@@ -50,7 +56,8 @@
     <ItemGroup>
         <Compile Include="Attribute\DisplayAttribute.cs" />
         <Compile Include="PanelsHelper\ImageHelper.cs" />
-        <Compile Include="PanelsHelper\PanelCreator.cs" />
+        <Compile Include="PanelsHelper\ButtonHelper.cs" />
+        <Compile Include="PanelsHelper\Scanner.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
