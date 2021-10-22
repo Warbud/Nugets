@@ -1,0 +1,40 @@
+name: UpdatePackage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [windows-latest]
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Setup MsBuild
+        uses: microsoft/setup-msbuild@v1.0.3
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
+
+      - name: Restore NuGet
+        run: nuget restore NuGet.Revit.sln
+
+      - name: Build 
+        run: msbuild NuGet.Revit.sln /p:Configuration=Release
+
+      - name: Pack NuGet
+        run: dotnet pack -c Release -o out
+        
+      - name: Nuget Add Source
+        run: nuget sources Add -Name "github" -Source https://nuget.pkg.github.com/nairda015/index.json -UserName nairda015 -Password ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Nuget SetAPIKey
+        run: nuget setapikey ${{ secrets.GITHUB_TOKEN }} -Source "github"
+        
+      - name: Publish the package to GitHub packages
+        run: nuget push out\*.nupkg -source "github" -SkipDuplicate
