@@ -85,7 +85,19 @@ namespace NuGet.Revit.Ribbon.PanelsHelper
         public static void AddPushButtonDataToPanel(this RibbonPanel panel, List<ButtonData> data)
         {
             var dataCount = data.Count;
-            if (dataCount % 3 == 1)
+            if (dataCount <= 2)
+            {
+                if (dataCount == 1)
+                {
+                    panel.AddItem(data[0]);
+                }
+                else
+                {
+                    panel.AddItem(data[0]);
+                    panel.AddItem(data[1]);
+                }
+            }
+            else if (dataCount % 3 == 1)
             {
                 for (var i = 0; i < dataCount - 4; i += 3)
                 {

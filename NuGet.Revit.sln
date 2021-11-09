@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Revit.Ribbon", "NuGet.Revit.Ribbon\NuGet.Revit.Ribbon.csproj", "{9C2AF89F-F1A4-476F-B668-E7181EA43DB6}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Revit.Ribbon", "NuGet.Revit.Ribbon\NuGet.Revit.Ribbon.csproj", "{C18EA6F9-2B95-4E53-A27D-2909089056B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C2AF89F-F1A4-476F-B668-E7181EA43DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C2AF89F-F1A4-476F-B668-E7181EA43DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C2AF89F-F1A4-476F-B668-E7181EA43DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C2AF89F-F1A4-476F-B668-E7181EA43DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C18EA6F9-2B95-4E53-A27D-2909089056B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C18EA6F9-2B95-4E53-A27D-2909089056B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C18EA6F9-2B95-4E53-A27D-2909089056B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C18EA6F9-2B95-4E53-A27D-2909089056B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC160237-0CC3-408A-9252-DA3D8C228504}
 	EndGlobalSection
 EndGlobal

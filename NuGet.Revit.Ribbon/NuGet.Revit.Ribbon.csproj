@@ -9,7 +9,7 @@
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>NuGet.Revit.Ribbon</RootNamespace>
         <AssemblyName>NuGet.Revit.Ribbon</AssemblyName>
-        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <LangVersion>9</LangVersion>
         <PackageId>Adrian.Revit.Ribbon</PackageId>
