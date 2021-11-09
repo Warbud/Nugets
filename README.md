@@ -1,2 +1,3 @@
 # Nuget.Revit
-## Extensions for custom revit ribbon
+[![CI](https://github.com/Nairda015/Nuget.Revit/actions/workflows/Build.yml/badge.svg)](https://github.com/Nairda015/Nuget.Revit/actions/workflows/Build.yml)
+### Extensions for custom revit ribbon
